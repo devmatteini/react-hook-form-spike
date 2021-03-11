@@ -16,6 +16,9 @@ const Header: React.FC = () => {
         <Navbar bg="dark" variant="dark" sticky="top" fixed="top">
             <Navbar.Collapse id="basic-navbar-nav" className="mr-5">
                 <Nav className="text-uppercase">
+                    <Nav.Link as={Link} to="/" className="px-3">
+                        /
+                    </Nav.Link>
                     <Nav.Link as={Link} to={routes.simpleForm} className="px-3">
                         Simple Form
                     </Nav.Link>
