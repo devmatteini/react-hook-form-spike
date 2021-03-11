@@ -5,10 +5,12 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
 import SimpleForm from "./pages/simple/simple-form"
 import "bootstrap/dist/css/bootstrap.min.css"
 import WatchersForm from "./pages/watchers/watchers-form"
+import YupForm from "./pages/yup-form/yup-form"
 
 const routes = {
     simpleForm: "/simple-form",
     watchers: "/watchers",
+    yup: "/yup",
 }
 
 const Header: React.FC = () => {
@@ -24,6 +26,9 @@ const Header: React.FC = () => {
                     </Nav.Link>
                     <Nav.Link as={Link} to={routes.watchers} className="px-3">
                         Watchers
+                    </Nav.Link>
+                    <Nav.Link as={Link} to={routes.yup} className="px-3">
+                        Schema validation with yup
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
@@ -51,6 +56,9 @@ const App: React.FC = () => (
             </Route>
             <Route path={routes.watchers}>
                 <WatchersForm />
+            </Route>
+            <Route path={routes.yup}>
+                <YupForm />
             </Route>
         </Switch>
     </BrowserRouter>
