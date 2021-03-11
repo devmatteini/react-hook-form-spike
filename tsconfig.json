@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "Node", // specify to resolve modules in node style
+    "jsx": "react", // use typescript to transpile jsx to js
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false, // disallow implicit any type
+    "esModuleInterop": true,
+    "target": "ES2019",
+    "outDir": "build"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
