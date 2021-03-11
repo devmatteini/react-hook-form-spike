@@ -4,9 +4,11 @@ import { render } from "react-dom"
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
 import SimpleForm from "./pages/simple/simple-form"
 import "bootstrap/dist/css/bootstrap.min.css"
+import WatchersForm from "./pages/watchers/watchers-form"
 
 const routes = {
     simpleForm: "/simple-form",
+    watchers: "/watchers",
 }
 
 const Header: React.FC = () => {
@@ -16,6 +18,9 @@ const Header: React.FC = () => {
                 <Nav className="text-uppercase">
                     <Nav.Link as={Link} to={routes.simpleForm} className="px-3">
                         Simple Form
+                    </Nav.Link>
+                    <Nav.Link as={Link} to={routes.watchers} className="px-3">
+                        Watchers
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
@@ -40,6 +45,9 @@ const App: React.FC = () => (
             </Route>
             <Route path={routes.simpleForm}>
                 <SimpleForm />
+            </Route>
+            <Route path={routes.watchers}>
+                <WatchersForm />
             </Route>
         </Switch>
     </BrowserRouter>
