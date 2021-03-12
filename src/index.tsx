@@ -33,7 +33,7 @@ const Header: React.FC = () => {
                         Schema validation with yup
                     </Nav.Link>
                     <Nav.Link as={Link} to={routes.wrapper} className="px-3">
-                        Simple form + custom wrapper
+                        Custom wrapper
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
