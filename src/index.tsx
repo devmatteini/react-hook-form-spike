@@ -6,11 +6,13 @@ import SimpleForm from "./pages/simple/simple-form"
 import "bootstrap/dist/css/bootstrap.min.css"
 import WatchersForm from "./pages/watchers/watchers-form"
 import YupForm from "./pages/yup-form/yup-form"
+import WrapperForm from "./pages/wrapper/wrapper-form"
 
 const routes = {
     simpleForm: "/simple-form",
     watchers: "/watchers",
     yup: "/yup",
+    wrapper: "/wrapper",
 }
 
 const Header: React.FC = () => {
@@ -29,6 +31,9 @@ const Header: React.FC = () => {
                     </Nav.Link>
                     <Nav.Link as={Link} to={routes.yup} className="px-3">
                         Schema validation with yup
+                    </Nav.Link>
+                    <Nav.Link as={Link} to={routes.wrapper} className="px-3">
+                        Simple form + custom wrapper
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
@@ -59,6 +64,9 @@ const App: React.FC = () => (
             </Route>
             <Route path={routes.yup}>
                 <YupForm />
+            </Route>
+            <Route path={routes.wrapper}>
+                <WrapperForm />
             </Route>
         </Switch>
     </BrowserRouter>
